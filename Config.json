@@ -1,0 +1,450 @@
+{
+  "meta": {
+    "title": "Jack’s Time Terminal",
+    "hint_cooldown_seconds": 90,
+    "goal_node": "N7",
+    "timeline_anchor_year": 1970
+  },
+  "nodes": {
+    "N1": {
+      "title": "Color Lab (Present)",
+      "time": "04:10",
+      "godskip": "GOD-N1-4412",
+      "routes": [
+        "N2"
+      ],
+      "intro": [
+        {
+          "speaker": "NARRATOR",
+          "text": "The Color Lab wakes like a theatre: ceiling strips hum alive, glass panels flare, and the air itself seems to hold its breath."
+        },
+        {
+          "speaker": "NARRATOR",
+          "text": "Six shapes drift into formation—three rectangles above, three triangles below—like a lock waiting for the right count."
+        },
+        {
+          "speaker": "JESSICA",
+          "text": "Steady, {player}. This first node is a ritual of counting, not guessing."
+        },
+        {
+          "speaker": "ARIA",
+          "text": "Then every color change is a clue, not decoration."
+        },
+        {
+          "speaker": "JESSICA",
+          "text": "Watch how the upper row behaves across cycles; it follows a tight warm triad."
+        },
+        {
+          "speaker": "JESSICA",
+          "text": "Now watch the lower row: the cold tones obey a stricter rhythm than the row above."
+        },
+        {
+          "speaker": "JESSICA",
+          "text": "Trust the clock: the minutes tell you the size of one color pool. Then compute the total combinations."
+        }
+      ],
+      "hints": [
+        {
+          "id": "h1",
+          "text": "Start from time 04:10. Minutes (10) define the size of the cold-color pool.",
+          "cost": 2
+        },
+        {
+          "id": "h2",
+          "text": "For the 3 lower shapes, order matters and colors do not repeat in one frame: 10 x 9 x 8.",
+          "cost": 4
+        },
+        {
+          "id": "h3",
+          "text": "For the 3 upper shapes, only three warm tones are used and repetition is possible: 3 x 3 x 3.",
+          "cost": 6
+        },
+        {
+          "id": "h4",
+          "text": "Stuck too long? You can use solvelose colors, but answer reveal unlocks only after 5 minutes.",
+          "cost": 8
+        }
+      ],
+      "games": [
+        {
+          "id": "colors",
+          "title": "Chromatic Drift",
+          "solve_points": 12,
+          "token": "AURORA",
+          "answer": 19440
+        }
+      ],
+      "year": 1970,
+      "era_story": "The UNIX epoch dawns soon; terminals are raw, loud, and full of possibility."
+    },
+    "N2": {
+      "title": "Chess Switchyard (1930)",
+      "time": "08:30",
+      "godskip": "GOD-N2-9901",
+      "routes": [
+        "N3"
+      ],
+      "intro": [
+        {
+          "speaker": "NARRATOR",
+          "text": "Switchboards clack like thunder while brass relays blink in strict rhythm."
+        },
+        {
+          "speaker": "JESSICA",
+          "text": "{player}, this node rewards precision. A knight can strike two futures in one leap."
+        },
+        {
+          "speaker": "JACK",
+          "text": "So one move should threaten both king and power."
+        },
+        {
+          "speaker": "JESSICA",
+          "text": "Exactly. Find the fork square where panic and material loss happen together."
+        }
+      ],
+      "hints": [
+        {
+          "id": "h1",
+          "text": "The move is a knight fork on king + queen pressure. Visualize Ne7 first.",
+          "cost": 3
+        },
+        {
+          "id": "h2",
+          "text": "Use standard move form: piece + square. Example format: Ne7.",
+          "cost": 5
+        },
+        {
+          "id": "h3",
+          "text": "If your move attacks only one target, it is not the fork you want.",
+          "cost": 6
+        }
+      ],
+      "games": [
+        {
+          "id": "chess",
+          "title": "Forked Timeline",
+          "solve_points": 15,
+          "token": "KNIGHT",
+          "answer": "Ne7"
+        }
+      ],
+      "year": 1930,
+      "era_story": "Electromechanical logic is young—switches, relays, and chess-like planning shape computation."
+    },
+    "N3": {
+      "title": "Code Observatory (2030)",
+      "time": "20:30",
+      "godskip": "GOD-N3-1209",
+      "routes": [
+        "N4"
+      ],
+      "intro": [
+        {
+          "speaker": "NARRATOR",
+          "text": "Glass walls bloom with code, branches, and overwrites like a storm of logic."
+        },
+        {
+          "speaker": "JESSICA",
+          "text": "{player}, this is your routing exam: three short questions, no lucky guessing."
+        },
+        {
+          "speaker": "JACK",
+          "text": "So I trace every assignment to the final destination."
+        },
+        {
+          "speaker": "JESSICA",
+          "text": "Yes. First wrong try on each question costs points—slow thinking beats fast typing."
+        },
+        {
+          "speaker": "NARRATOR",
+          "text": "The wrong branch is never random; it is usually one assumption made too quickly."
+        }
+      ],
+      "hints": [
+        {
+          "id": "h1",
+          "text": "There are three questions now: A, B, C. Solve each with: solve code <ID> <N#>.",
+          "cost": 3
+        },
+        {
+          "id": "h2",
+          "text": "Use showcode A/B/C and track final assignment, not the first value.",
+          "cost": 5
+        },
+        {
+          "id": "h3",
+          "text": "First wrong attempt on each question costs score once, so verify before submitting.",
+          "cost": 6
+        }
+      ],
+      "games": [
+        {
+          "id": "codes",
+          "title": "Where Did Jack Go?",
+          "solve_points": 14,
+          "token": "TRACE",
+          "answer": [
+            {
+              "snippet": "A",
+              "node": "N4"
+            },
+            {
+              "snippet": "B",
+              "node": "N5"
+            },
+            {
+              "snippet": "C",
+              "node": "N6"
+            }
+          ]
+        }
+      ],
+      "year": 2030,
+      "era_story": "AI copilots and distributed systems reshape software decisions at planetary scale."
+    },
+    "N4": {
+      "title": "Regex Drift (Timeless)",
+      "time": "13:37",
+      "godskip": "GOD-N4-7770",
+      "routes": [
+        "N5"
+      ],
+      "intro": [
+        {
+          "speaker": "NARRATOR",
+          "text": "The room becomes a living console: strings mutate while regex gates pulse in sequence."
+        },
+        {
+          "speaker": "JESSICA",
+          "text": "{player}, watch before you answer. Variations reveal the rule better than any lecture."
+        },
+        {
+          "speaker": "JACK",
+          "text": "Four samples, five regex choices, then commit."
+        },
+        {
+          "speaker": "JESSICA",
+          "text": "Right. Four rounds total. You gain and lose score each round, so stay sharp."
+        },
+        {
+          "speaker": "NARRATOR",
+          "text": "Each regex choice feels like choosing a language to describe chaos."
+        }
+      ],
+      "hints": [
+        {
+          "id": "h1",
+          "text": "Read all 4 changing sample strings. Your regex must match every shown variation.",
+          "cost": 3
+        },
+        {
+          "id": "h2",
+          "text": "You choose among 5 regex options each round. Correct = +2, wrong = -2.",
+          "cost": 5
+        },
+        {
+          "id": "h3",
+          "text": "Complete 4 rounds, then the node unlocks regardless of total score.",
+          "cost": 6
+        }
+      ],
+      "games": [
+        {
+          "id": "regex",
+          "title": "Pattern Storm",
+          "solve_points": 10,
+          "token": "ANCHOR",
+          "answer": "4 rounds of regex picks; scoring is dynamic"
+        }
+      ],
+      "year": 1998,
+      "era_story": "The web explodes; regex becomes everyday magic for logs, forms, and protocols."
+    },
+    "N5": {
+      "title": "Binary Clock Grid (3000)",
+      "time": "10:10",
+      "godskip": "GOD-N5-6606",
+      "routes": [
+        "N6"
+      ],
+      "intro": [
+        {
+          "speaker": "NARRATOR",
+          "text": "A clock wall flickers in binary columns while a tic-tac-toe table rises from the floor."
+        },
+        {
+          "speaker": "JESSICA",
+          "text": "{player}, time logic beats ego here: not every round should be a win."
+        },
+        {
+          "speaker": "JACK",
+          "text": "So outcomes are bits? Win is 1, lose is 0?"
+        },
+        {
+          "speaker": "JESSICA",
+          "text": "Exactly. Build a 4-bit clock code from four rounds. The target rhythm is 1010."
+        }
+      ],
+      "hints": [
+        {
+          "id": "h1",
+          "text": "Map outcomes to bits: W=1, L=0. You need a 4-bit sequence.",
+          "cost": 4
+        },
+        {
+          "id": "h2",
+          "text": "Target scheme is WIN, LOSE, WIN, LOSE — binary 1010.",
+          "cost": 6
+        },
+        {
+          "id": "h3",
+          "text": "A draw breaks the pattern. Reset and replay the 4-round trial.",
+          "cost": 7
+        }
+      ],
+      "games": [
+        {
+          "id": "tictactoe",
+          "title": "Clockline Tic-Tac-Toe",
+          "solve_points": 18,
+          "token": "PARADOX",
+          "answer": "W,L,W,L (binary 1010 over 4 rounds)"
+        }
+      ],
+      "year": 2140,
+      "era_story": "Strategy engines train with game theory to coordinate humans and autonomous systems."
+    },
+    "N6": {
+      "title": "Nim Arena (1970)",
+      "time": "07:03",
+      "godskip": "GOD-N6-0420",
+      "routes": [
+        "N7"
+      ],
+      "intro": [
+        {
+          "speaker": "NARRATOR",
+          "text": "Three Nim terminals boot in a row, each demanding a clean strategic finish."
+        },
+        {
+          "speaker": "JESSICA",
+          "text": "{player}, this node is multiple trials: win Nim three times to prove control."
+        },
+        {
+          "speaker": "JACK",
+          "text": "So one lucky game is not enough."
+        },
+        {
+          "speaker": "JESSICA",
+          "text": "Right. Tempo, modulo control, repeat. Win 3 runs, then travel onward."
+        }
+      ],
+      "hints": [
+        {
+          "id": "h1",
+          "text": "Take 1-3 stones. The player who takes the last stone loses.",
+          "cost": 3
+        },
+        {
+          "id": "h2",
+          "text": "Control positions that leave 1 mod 4 to the opponent.",
+          "cost": 5
+        },
+        {
+          "id": "h3",
+          "text": "You must win 3 completed runs in this node.",
+          "cost": 6
+        }
+      ],
+      "games": [
+        {
+          "id": "dilemma",
+          "title": "Nim Lab",
+          "solve_points": 16,
+          "token": "TRUST",
+          "answer": "win 3 Nim runs"
+        }
+      ],
+      "year": 1970,
+      "era_story": "Back at the epoch: from this checkpoint, sequence logic and playful puzzles bridge eras."
+    },
+    "N7": {
+      "title": "N7 Dancing Goal",
+      "time": "00:00",
+      "year": 2001,
+      "era_story": "The goal era celebrates computer science as a shared story: theory, systems, and people building together.",
+      "godskip": "GOD-N7-9000",
+      "routes": [],
+      "intro": [
+        {
+          "speaker": "NARRATOR",
+          "text": "Lights burst into color and the whole terminal hall starts dancing in sync."
+        },
+        {
+          "speaker": "JESSICA",
+          "text": "{player}, goal reached. Every era you crossed is celebrating."
+        },
+        {
+          "speaker": "JACK",
+          "text": "Even the servers are dancing. We actually made it."
+        },
+        {
+          "speaker": "NARRATOR",
+          "text": "Victory log: strategy, timing, and patience restored the timeline. Everything is dancing."
+        }
+      ],
+      "hints": [
+        {
+          "id": "h1",
+          "text": "Type unlock <anything> to trigger the celebration ending.",
+          "cost": 0
+        }
+      ],
+      "games": [
+        {
+          "id": "final",
+          "title": "Celebration Unlock",
+          "solve_points": 50,
+          "token": "AXIS",
+          "answer": "any unlock answer works"
+        }
+      ],
+      "year": 1970,
+      "era_story": "Back at the epoch: from this checkpoint, sequence logic and playful puzzles bridge eras."
+    },
+    "N7": {
+      "title": "N7 The Axis Goal",
+      "time": "00:00",
+      "year": 2001,
+      "era_story": "The goal era celebrates computer science as a shared story: theory, systems, and people building together.",
+      "godskip": "GOD-N7-9000",
+      "routes": [],
+      "intro": [
+        {
+          "speaker": "NARRATOR",
+          "text": "The final chamber is quiet. Fans spin like distant rain over a cathedral of servers."
+        },
+        {
+          "speaker": "JESSICA",
+          "text": "{player}, goal reached. You crossed decades of ideas, from relays to algorithms to playful logic."
+        },
+        {
+          "speaker": "JACK",
+          "text": "So this was never only about answers—it was about how computing evolved."
+        },
+        {
+          "speaker": "NARRATOR",
+          "text": "Timeline log: 1930 relays, 1970 systems thinking, 1998 web scale, 2030 AI collaboration, and beyond."
+        }
+      ],
+      "hints": [
+        {
+          "id": "h1",
+          "text": "Type isGoal to compare your node time and timeline year against the goal.",
+          "cost": 0
+        }
+      ],
+      "games": []
+    }
+  }
+}
